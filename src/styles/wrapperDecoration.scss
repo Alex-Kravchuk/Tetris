@@ -1,0 +1,81 @@
+@import url("https://fonts.googleapis.com/css2?family=Otomanopee+One&display=swap");
+@mixin sideDecoration {
+  position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    @content;
+    top: 45px;
+    height: 300px;
+
+    table {
+      td {
+        div {
+          width: 5px;
+          height: 5px;
+          background-color: #fff;
+        }
+      }
+    }
+}
+
+.wrapper {
+  
+  &__left-decoration {
+    @include sideDecoration {
+      left: 5%;
+    }
+  }
+
+  &__right-decoration {
+    @include sideDecoration {
+      right: 5%;
+    }
+  }
+
+  &__bottom-decoration {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 10px;
+    color: #fff;
+    hr {
+      background-color: #fff;
+      height: 2px;
+      font-size: 24px;
+      margin: 0 20px;
+    }
+  }
+
+  &__name-game {
+    display: flex;
+    justify-content: center;
+    font-family: "Otomanopee One", sans-serif;
+    color: rgb(9, 129, 177);
+    font-weight: 900;
+    font-size: 48px;
+    margin-bottom: 40px;
+
+    div:first-child {
+      text-align: start;
+      padding: 0;
+      margin: 0 0 -10px 0;
+      transform: rotate(-35deg);
+    }
+
+    div:last-child {
+      text-align: center;
+      padding: 0;
+      margin-left: 20px;
+      transform: rotate(-35deg);
+    }
+  }
+}
+
+.empty-cell {
+  border: none;
+  content: "";
+  div {
+    display: none;
+  }
+}

@@ -1,0 +1,63 @@
+@mixin discribeButtons {
+  div:after {
+    @content;
+    position: absolute;
+    top: 100%;
+    right: 50%;
+    transform: translate(50%, 0);
+    font-size: 12px;
+    color: #fff;
+  }
+}
+
+.app {
+  &__keyboard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+    width: 100%;
+    padding-top: 50px;
+  }
+
+  &__system-buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+    padding: 20px 0;
+
+    div {
+      position: relative;
+      cursor: pointer;
+      width: 25px;
+      height: 25px;
+      background-color: yellow;
+      border-radius: 50%;
+      box-shadow: inset 0 -2px rgb(0, 0, 0);
+    }
+
+    // при нажатии
+    // div:hover {
+    //   box-shadow: inset 0 2px rgb(0, 0, 0);
+    // }
+  }
+
+  &__reset-button {
+    @include discribeButtons() {
+      content: "Reset";
+    }
+  }
+
+  &__pause-button {
+    @include discribeButtons() {
+      content: "Pause";
+    }
+  }
+
+  &__sound-button {
+    @include discribeButtons() {
+      content: "Sound";
+    }
+  }
+}

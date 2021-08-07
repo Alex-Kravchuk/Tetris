@@ -1,0 +1,335 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap");
+
+@mixin sizeTextInfoGame {
+  &__game-score {
+    @content;
+  }
+
+  &__game-level {
+    @content;
+  }
+
+  &__next-element {
+    @content;
+  }
+}
+
+@mixin gameFieldSize {
+  table {
+    border: 2px solid black;
+    td {
+      div {
+        @content;
+        background-color: $backgroungForCell;
+      }
+    }
+  }
+}
+
+@media (max-width: 1690px) {
+  @include gameFieldSize() {
+    width: 13px;
+    height: 13px;
+  }
+
+  .app {
+    @include sizeTextInfoGame() {
+      font-size: 22px;
+    }
+
+    &__system-signs {
+      width: 80%;
+      i {
+        font-size: 18px;
+      }
+    }
+
+    &__time {
+      font-size: 16px;
+      padding-right: 10px;
+    }
+  }
+}
+
+@media (min-width: 1440px) {
+  @include gameFieldSize() {
+    width: 11px;
+    height: 11px;
+  }
+
+  .app {
+    @include sizeTextInfoGame() {
+      font-size: 22px;
+    }
+
+    &__system-signs {
+      width: 80%;
+      i {
+        font-size: 18px;
+      }
+    }
+
+    &__time {
+      font-size: 14px;
+    }
+  }
+}
+
+@media (min-width: 1023px) {
+  @include gameFieldSize() {
+    width: 11px;
+    height: 11px;
+  }
+
+  .app {
+    @include sizeTextInfoGame() {
+      font-size: 22px;
+    }
+
+    &__system-signs {
+      width: 80%;
+
+      i {
+        font-size: 18px;
+      }
+    }
+
+    &__time {
+	padding-left: 5px;
+      font-size: 14px;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  @include gameFieldSize() {
+    width: 20px;
+    height: 18px;
+  }
+
+  .app {
+    @include sizeTextInfoGame() {
+      font-size: 32px;
+    }
+
+    &__system-signs {
+      width: 80%;
+      i {
+        font-size: 28px;
+      }
+    }
+    &__time {
+      font-size: 26px;
+    }
+  }
+}
+
+@media (max-height: 880px) {
+  .app {
+    &__system-signs {
+      i {
+        font-size: 12px;
+      }
+      div:first-child {
+        margin: 0;
+      }
+
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  @include gameFieldSize() {
+    width: 15px;
+    height: 15px;
+  }
+
+  .app {
+    @include sizeTextInfoGame() {
+      font-size: 22px;
+    }
+
+    &__system-signs {
+      width: 80%;
+
+      i {
+        font-size: 22px;
+      }
+    }
+
+    &__time {
+      font-size: 22px;
+	  padding: 0 5px;
+    }
+  }
+}
+
+@media (max-height: 600px) {
+  @include gameFieldSize() {
+    width: 2px;
+    height: 2px;
+  }
+
+  .app {
+    @include sizeTextInfoGame() {
+      font-size: 12px;
+    }
+
+    &__system-signs {
+      i {
+        font-size: 8px;
+      }
+    }
+
+    &__time {
+      font-size: 10px;
+    }
+  }
+}
+
+@media (max-height: 650px) {
+  @include gameFieldSize() {
+    width: 4px;
+    height: 4px;
+  }
+
+  .app {
+    @include sizeTextInfoGame() {
+      font-size: 12px;
+    }
+
+    &__system-signs {
+      i {
+        font-size: 8px;
+      }
+    }
+
+    &__time {
+      font-size: 10px;
+    }
+  }
+}
+
+@media (max-height: 750px) {
+  @include gameFieldSize() {
+    width: 3px;
+    height: 3px;
+  }
+
+  .app {
+    @include sizeTextInfoGame() {
+      font-size: 12px;
+    }
+
+    &__system-signs {
+      i {
+        font-size: 8px;
+      }
+
+    }
+    &__time {
+      font-size: 10px;
+    }
+  }
+}
+
+@media (max-height: 600px) {
+  @include gameFieldSize() {
+    width: 3px;
+    height: 3px;
+  }
+
+  .app {
+
+    @include sizeTextInfoGame() {
+      font-size: 12px;
+    }
+
+    &__system-signs {
+      i {
+        font-size: 8px;
+      }
+    }
+
+    &__time {
+      font-size: 10px;
+    }
+  }
+}
+
+@media (max-width: 450px) {
+  @include gameFieldSize() {
+    width: 5px;
+    height: 5px;
+  }
+
+  .app {
+
+    @include sizeTextInfoGame() {
+      font-size: 14px;
+    }
+
+    &__system-signs {
+      box-sizing: border-box;
+      width: 100%;
+
+      i {
+        font-size: 14px;
+      }
+
+    }
+    &__time {
+      font-size: 12px;
+	  padding-right: 0px;
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  @include gameFieldSize() {
+    width: 4px;
+    height: 4px;
+  }
+
+  .app {
+    @include sizeTextInfoGame() {
+      font-size: 12px;
+    }
+
+    &__system-signs {
+      i {
+        font-size: 8px;
+      }
+     
+    }
+
+    &__time {
+      font-size: 10px;
+    }
+  }
+}
+
+
+@media (max-width: 320px) {
+  @include gameFieldSize() {
+    width: 2px;
+    height: 2px;
+  }
+
+  .app {
+
+    @include sizeTextInfoGame() {
+      font-size: 12px;
+    }
+
+    &__system-signs {
+      i {
+        font-size: 8px;
+      }
+    }
+
+    &__time {
+      font-size: 10px;
+    }
+  }
+}

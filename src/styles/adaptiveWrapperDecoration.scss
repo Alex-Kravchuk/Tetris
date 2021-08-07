@@ -1,0 +1,326 @@
+@mixin hrMargin {
+  hr {
+    margin: 20px;
+  }
+}
+
+@mixin sizeCellsOfDecorationBIG {
+  table {
+    td {
+      div {
+        width: 12px;
+        height: 12px;
+      }
+    }
+  }
+}
+
+@mixin sizeCellsOfDecorationSMALL {
+  table {
+    td {
+      div {
+        width: 4px;
+        height: 4px;
+      }
+    }
+  }
+}
+
+@mixin sizeCellsOfDecorationMINI {
+  table {
+    td {
+      div {
+        width: 2px;
+        height: 2px;
+      }
+    }
+  }
+}
+
+@media (min-width: 1440px) {
+  .wrapper {
+    &__left-decoration {
+      height: 450px;
+
+      @include sizeCellsOfDecorationBIG();
+    }
+
+    &__right-decoration {
+      height: 450px;
+      @include sizeCellsOfDecorationBIG();
+    }
+
+    &__bottom-decoration {
+      @include hrMargin();
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .wrapper {
+    &__left-decoration {
+      height: 400px;
+
+      @include sizeCellsOfDecorationBIG();
+    }
+
+    &__right-decoration {
+      height: 400px;
+
+      @include sizeCellsOfDecorationBIG();
+    }
+
+    &__bottom-decoration {
+      @include hrMargin();
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .wrapper {
+    &__left-decoration {
+      height: 500px;
+
+      @include sizeCellsOfDecorationBIG();
+    }
+
+    &__right-decoration {
+      height: 500px;
+
+      @include sizeCellsOfDecorationBIG();
+    }
+
+    &__bottom-decoration {
+      @include hrMargin();
+    }
+
+    &__name-game {
+      font-size: 68px;
+    }
+  }
+}
+
+@media (max-height: 880px) {
+  .wrapper {
+    &__left-decoration {
+      height: 400px;
+
+      table {
+        td {
+          div {
+            width: 5px;
+            height: 5px;
+          }
+        }
+      }
+    }
+
+    &__right-decoration {
+      height: 400px;
+
+      table {
+        td {
+          div {
+            width: 5px;
+            height: 5px;
+            background-color: #fff;
+          }
+        }
+      }
+    }
+
+    &__bottom-decoration {
+      @include hrMargin();
+    }
+
+    &__name-game {
+      font-size: 38px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+    &__left-decoration {
+      height: 500px;
+
+      table {
+        td {
+          div {
+            width: 8px;
+            height: 8px;
+          }
+        }
+      }
+    }
+
+    &__right-decoration {
+      height: 500px;
+
+      table {
+        td {
+          div {
+            width: 8px;
+            height: 8px;
+          }
+        }
+      }
+    }
+
+    &__bottom-decoration {
+      @include hrMargin();
+    }
+
+    &__name-game {
+      font-size: 65px;
+    }
+  }
+}
+
+@media (max-width: 450px) {
+  .wrapper {
+    &__left-decoration {
+      height: 250px;
+
+      @include sizeCellsOfDecorationMINI();
+    }
+
+    &__right-decoration {
+      height: 250px;
+
+      @include sizeCellsOfDecorationMINI();
+    }
+
+    &__bottom-decoration {
+      @include hrMargin();
+    }
+
+    &__name-game {
+      font-size: 28px;
+      margin-bottom: 25px;
+    }
+  }
+}
+
+@media (max-height: 700px) {
+  .wrapper {
+    &__left-decoration {
+      height: 250px;
+
+      @include sizeCellsOfDecorationMINI();
+    }
+
+    &__right-decoration {
+      height: 250px;
+
+      @include sizeCellsOfDecorationMINI();
+    }
+
+    &__bottom-decoration {
+      @include hrMargin();
+    }
+
+    &__name-game {
+      font-size: 28px;
+      margin-bottom: 25px;
+    }
+  }
+}
+
+@media (max-height: 850px) and (min-height: 750px) {
+  .wrapper {
+    &__left-decoration {
+      height: 300px;
+
+      @include sizeCellsOfDecorationSMALL();
+    }
+
+    &__right-decoration {
+      height: 300px;
+
+      @include sizeCellsOfDecorationSMALL();
+    }
+
+    &__bottom-decoration {
+      @include hrMargin();
+    }
+
+    &__name-game {
+      font-size: 35px;
+      margin-bottom: 25px;
+    }
+  }
+}
+
+@media (max-height: 750px) {
+  .wrapper {
+    &__left-decoration {
+      height: 300px;
+
+      @include sizeCellsOfDecorationSMALL();
+    }
+
+    &__right-decoration {
+      height: 300px;
+
+      @include sizeCellsOfDecorationSMALL();
+    }
+
+    &__bottom-decoration {
+      @include hrMargin();
+    }
+
+    &__name-game {
+      font-size: 35px;
+      margin-bottom: 25px;
+    }
+  }
+}
+
+@media (max-height: 650px) {
+  .wrapper {
+    &__left-decoration {
+      height: 300px;
+
+      @include sizeCellsOfDecorationSMALL();
+    }
+
+    &__right-decoration {
+      height: 300px;
+
+      @include sizeCellsOfDecorationSMALL();
+    }
+
+    &__bottom-decoration {
+      @include hrMargin();
+    }
+
+    &__name-game {
+      font-size: 30px;
+      margin-bottom: 25px;
+    }
+  }
+}
+
+@media (max-height: 600px) {
+  .wrapper {
+    &__left-decoration {
+      height: 270px;
+      @include sizeCellsOfDecorationSMALL();
+    }
+
+    &__right-decoration {
+      height: 270px;
+      @include sizeCellsOfDecorationSMALL();
+    }
+
+    &__bottom-decoration {
+      @include hrMargin();
+    }
+
+    &__name-game {
+      font-size: 25px;
+      margin-bottom: 25px;
+    }
+  }
+}

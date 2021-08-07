@@ -1,0 +1,169 @@
+@mixin textSizeForBigScreen {
+  div:after {
+    font-size: 20px;
+  }
+}
+
+@mixin textSizeForMediumScreen {
+  div:after {
+    font-size: 16px;
+  }
+}
+
+@mixin textSizeForSmallScreen {
+  div:after {
+    font-size: 12px;
+  }
+}
+
+@mixin buttonsSizeForBigScreen {
+  div {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@mixin buttonsSizeForMediumScreen {
+  div {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+@mixin buttonsSizeForSmallScreen {
+  div {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .app {
+    &__keyboard {
+      padding-top: 20px;
+    }
+
+    &__system-buttons {
+      padding: 0 0 10px 0;
+      @include buttonsSizeForBigScreen();
+    }
+
+    &__reset-button {
+      @include textSizeForBigScreen();
+    }
+
+    &__pause-button {
+      @include textSizeForBigScreen();
+    }
+
+    &__sound-button {
+      @include textSizeForBigScreen();
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .app {
+    &__keyboard {
+      padding-top: 20px;
+    }
+
+    &__system-buttons {
+      padding: 0 0 10px 0;
+
+      @include buttonsSizeForBigScreen();
+    }
+
+    &__reset-button {
+      @include textSizeForBigScreen();
+    }
+
+    &__pause-button {
+      @include textSizeForBigScreen();
+    }
+
+    &__sound-button {
+      @include textSizeForBigScreen();
+    }
+  }
+}
+
+@media (max-height: 880px) {
+  .app {
+    &__keyboard {
+      padding-top: 10px;
+    }
+
+    &__system-buttons {
+      padding: 10px 0;
+
+      @include buttonsSizeForMediumScreen();
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .app {
+    &__keyboard {
+      padding-top: 20px;
+    }
+
+    &__system-buttons {
+      padding: 0 0 10px 0;
+
+      @include buttonsSizeForMediumScreen();
+    }
+
+    &__reset-button {
+      @include textSizeForMediumScreen();
+    }
+
+    &__pause-button {
+      @include textSizeForMediumScreen();
+    }
+
+    &__sound-button {
+      @include textSizeForMediumScreen();
+    }
+  }
+}
+
+@media (max-height: 650px) {
+  .app {
+    &__keyboard {
+      padding-top: 10px;
+    }
+
+    &__system-buttons {
+      padding: 0 0 10px 0;
+
+      @include buttonsSizeForSmallScreen();
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .app {
+    &__keyboard {
+      padding-top: 10px;
+    }
+
+    &__system-buttons {
+      padding: 10px 0;
+
+      @include buttonsSizeForSmallScreen();
+    }
+
+    &__reset-button {
+      @include textSizeForSmallScreen();
+    }
+
+    &__pause-button {
+      @include textSizeForSmallScreen();
+    }
+
+    &__sound-button {
+      @include textSizeForSmallScreen();
+    }
+  }
+}

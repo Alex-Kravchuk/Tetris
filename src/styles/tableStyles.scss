@@ -1,0 +1,24 @@
+$backgroungForCell: rgba(139, 139, 139, 0.774);
+
+body {
+  background-color: #cfc56a;
+}
+
+.element-cell {
+  border: 2px solid black;
+  div {
+    background-color: black;
+  }
+}
+
+table {
+  border: 2px solid black;
+  td {
+    border: 2px solid $backgroungForCell;
+    div {
+      width: 5px;
+      height: 5px;
+      background-color: $backgroungForCell;
+    }
+  }
+}
